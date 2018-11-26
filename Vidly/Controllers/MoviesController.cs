@@ -26,6 +26,17 @@ namespace Vidly.Controllers
             };
             return View(viewModel)  ;
         }
+
+        [Route("movies/movieslist")]
+        public ActionResult MovieList(){
+            var movies = new List<Movie>
+            {
+                new Movie{ Name = "MI1"  },
+                new Movie{ Name  = "MI2" }
+            };
+
+            return View(movies);
+        }
         public ActionResult Edit(int id) {
             return Content("id = " + id);
         }

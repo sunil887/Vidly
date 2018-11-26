@@ -1,0 +1,17 @@
+﻿@using Vidly.Models 
+
+@model  List<Movie>
+
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+<h1>Movies</h1>
+   <ul>
+    @foreach (var movie in Model) {
+              <li class=" list-group-item  list-group-item-action  list-group-item-info">@movie.Name</li>
+    }
+  </ul>
+
+
