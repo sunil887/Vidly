@@ -6,12 +6,23 @@
     ViewBag.Title = "Customer";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    
-<h1>Movies</h1>
-   <ul>
-    @foreach (var movie in Model) {
-              <li class=" list-group-item  list-group-item-action  list-group-item-info">@movie.Name</li>
-    }
-  </ul>
+   <h1 class="jumbotron" > Movies</h1>
+<table class="table table-hover  table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model) {
+            <tr>
+                <td><a href="@Url.Action("details","Movies",new { id = movie.Id})">@movie.Name</a></td>
+                <td>@movie.Genre.Name</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
 
 

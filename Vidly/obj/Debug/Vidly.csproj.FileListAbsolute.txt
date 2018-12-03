@@ -94,3 +94,15 @@ C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.IsSubscribedToNews
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTable.resources
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationToCustomerName.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.addNameToMembershipType.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateMembershipTypeName.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.Monthly.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations._2ndAttemptToUpdateMemebersipTypes.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddBirthdayToCustomer.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations._2ndAddBirthdayToCustomer.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.CORRECTION.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedingGenre.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedingGenre1.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.GenreIdToByteInMovieModel.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.DateAddedToMovie.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.addRomanceToGenreTable.resources

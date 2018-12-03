@@ -5,40 +5,33 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
         // GET: Movies/Random  
+        private MyDbContext _context;
+        public MoviesController()
+        {
+            _context = new MyDbContext();
+        }
         public ActionResult Random ()
         {
-            var movie = new Movie() { Name = "shrek!" };
-            var customers = new List<Customer>
-            {   
-                new Customer { Name = "Customer1"},
-                new Customer { Name = "Customer2"}
-            };
-
-            var viewModel = new RandomMovieViewModel {
-                 Movie = movie,
-                 Customers = customers
-            };
-            return View(viewModel)  ;
+            _context.Dispose();
+            return View()  ;
         }
 
         [Route("movies/movieslist")]
         public ActionResult MovieList(){
-            var movies = new List<Movie>
-            {
-                new Movie{ Name = "MI1"  },
-                new Movie{ Name  = "MI2" }
-            };
-
+            var movies = _context.movie.Include(c => c.Genre).ToList();
             return View(movies);
         }
-        public ActionResult Edit(int id) {
-            return Content("id = " + id);
+        [Route("movies/details/{id}")]
+        public ActionResult details(int id) {
+            var movies = _context.movie.Include(c => c.Genre).SingleOrDefault(c => c.Id == id); ;
+            return View(movies);
         }
         public ActionResult index(int? pageIndex, String sortBy){ //? is for makeing int nullable ,string is nullable by default
             if (!pageIndex.HasValue)
@@ -52,7 +45,7 @@ namespace Vidly.Controllers
         public ActionResult ByReleaseDate(int year,int month) {
             return Content(year + "/" + month);
         }
-
+          
 
     }  
     

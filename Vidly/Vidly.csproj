@@ -143,6 +143,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Migrations\201811250233412_initial.cs" />
     <Compile Include="Migrations\201811250233412_initial.Designer.cs">
       <DependentUpon>201811250233412_initial.cs</DependentUpon>
@@ -167,7 +168,56 @@
     <Compile Include="Migrations\201811261305325_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201811261305325_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811281954221_addNameToMembershipType.cs" />
+    <Compile Include="Migrations\201811281954221_addNameToMembershipType.Designer.cs">
+      <DependentUpon>201811281954221_addNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811281956243_UpdateMembershipTypeName.cs" />
+    <Compile Include="Migrations\201811281956243_UpdateMembershipTypeName.Designer.cs">
+      <DependentUpon>201811281956243_UpdateMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811282031566_Monthly.cs" />
+    <Compile Include="Migrations\201811282031566_Monthly.Designer.cs">
+      <DependentUpon>201811282031566_Monthly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811291816487_2ndAttemptToUpdateMemebersipTypes.cs" />
+    <Compile Include="Migrations\201811291816487_2ndAttemptToUpdateMemebersipTypes.Designer.cs">
+      <DependentUpon>201811291816487_2ndAttemptToUpdateMemebersipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811291848321_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201811291848321_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201811291848321_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811291909104_2ndAddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201811291909104_2ndAddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201811291909104_2ndAddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812011006049_CORRECTION.cs" />
+    <Compile Include="Migrations\201812011006049_CORRECTION.Designer.cs">
+      <DependentUpon>201812011006049_CORRECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022046496_SeedingGenre.cs" />
+    <Compile Include="Migrations\201812022046496_SeedingGenre.Designer.cs">
+      <DependentUpon>201812022046496_SeedingGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022051290_SeedingGenre1.cs" />
+    <Compile Include="Migrations\201812022051290_SeedingGenre1.Designer.cs">
+      <DependentUpon>201812022051290_SeedingGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022057096_GenreIdToByteInMovieModel.cs" />
+    <Compile Include="Migrations\201812022057096_GenreIdToByteInMovieModel.Designer.cs">
+      <DependentUpon>201812022057096_GenreIdToByteInMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022126220_DateAddedToMovie.cs" />
+    <Compile Include="Migrations\201812022126220_DateAddedToMovie.Designer.cs">
+      <DependentUpon>201812022126220_DateAddedToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812022201101_addRomanceToGenreTable.cs" />
+    <Compile Include="Migrations\201812022201101_addRomanceToGenreTable.Designer.cs">
+      <DependentUpon>201812022201101_addRomanceToGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -178,6 +228,7 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NewCustomerviewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -221,10 +272,13 @@
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Home\about.cshtml" />
     <Content Include="Views\Movies\MovieList.cshtml" />
+    <Content Include="Views\Customer\index.cshtml" />
+    <Content Include="Views\Customer\details.cshtml" />
+    <Content Include="Views\Movies\details.cshtml" />
+    <Content Include="Views\Customer\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -257,6 +311,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811261305325_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201811261305325_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811281954221_addNameToMembershipType.resx">
+      <DependentUpon>201811281954221_addNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811281956243_UpdateMembershipTypeName.resx">
+      <DependentUpon>201811281956243_UpdateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811282031566_Monthly.resx">
+      <DependentUpon>201811282031566_Monthly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811291816487_2ndAttemptToUpdateMemebersipTypes.resx">
+      <DependentUpon>201811291816487_2ndAttemptToUpdateMemebersipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811291848321_AddBirthdayToCustomer.resx">
+      <DependentUpon>201811291848321_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811291909104_2ndAddBirthdayToCustomer.resx">
+      <DependentUpon>201811291909104_2ndAddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812011006049_CORRECTION.resx">
+      <DependentUpon>201812011006049_CORRECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022046496_SeedingGenre.resx">
+      <DependentUpon>201812022046496_SeedingGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022051290_SeedingGenre1.resx">
+      <DependentUpon>201812022051290_SeedingGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022057096_GenreIdToByteInMovieModel.resx">
+      <DependentUpon>201812022057096_GenreIdToByteInMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022126220_DateAddedToMovie.resx">
+      <DependentUpon>201812022126220_DateAddedToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812022201101_addRomanceToGenreTable.resx">
+      <DependentUpon>201812022201101_addRomanceToGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

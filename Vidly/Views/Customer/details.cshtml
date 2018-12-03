@@ -1,0 +1,45 @@
+﻿
+
+@model Vidly.Models.Customer
+
+@{
+    ViewBag.Title = "details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>IsSubscribedToNewsletter</th>
+            <th>DiscountRate</th>
+            <th>DurationInMonths</th>
+            <th>SignUpFee</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            @if (Model.IsSubscribedToNewsletter)
+            {
+                <td>Yes</td>
+            }
+            else
+            {
+                <td>NO</td>
+            }
+            <td>@Model.MembershipType.DiscountRate</td>
+            <td>@Model.MembershipType.DurationInMonths</td>
+            <td>@Model.MembershipType.SignUpFee</td>
+            @if (Model.BirthdayDate != null)
+            {
+                <td>@Model.BirthdayDate</td>
+            }
+        </tr>
+    </tbody>
+</table>
+

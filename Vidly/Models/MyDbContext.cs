@@ -10,5 +10,6 @@ namespace Vidly.Controllers
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> movie { get; set; }
+        public DbSet<MembershipType> membershiptype { get; set; }
     }
 }
