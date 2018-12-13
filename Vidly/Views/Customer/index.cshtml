@@ -7,10 +7,11 @@
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
 <h1 class="jumbotron"> Customers</h1>
-    <table class="table table-hover table-bordered">
+    <table id= "customer" class="table table-hover table-bordered">
         <thead>
             <tr><th>Name</th>
-                <th>MembershipType</th>
+                <th>MembershipType</th> 
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -18,11 +19,33 @@
             @foreach (var customer in Model)
             {
                 <tr>
-                    <td><a href="@Url.Action("details","Customer",new { id = @customer.Id}) "> @customer.Name</a></td>
+                    <td><a href="@Url.Action("Edit","Customer",new { id = @customer.Id}) "> @customer.Name</a></td>
                     <td>@customer.MembershipType.Name</td>
+                    <td><button data-customer-id ="@customer.Id" class="btn-link js-delete">Delete</button></td>
                 </tr>
             }
 
         </tbody>
 
     </table>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#customer .js-delete").on("click", function () {
+                var button = $(this);
+                if (confirm("Are you sure want to delete ?")){
+                        $.ajax({
+                            url: "/api/customers/" + + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                console.log("Hello");
+                                button.parents("tr").remove();
+                            }
+                        })
+                    }
+
+                });
+            });
+        });
+    </script>   
+ }

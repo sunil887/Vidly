@@ -106,3 +106,12 @@ C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedingGenre1.reso
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.GenreIdToByteInMovieModel.resources
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.DateAddedToMovie.resources
 C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.addRomanceToGenreTable.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.removeDAtabaseGeneratedOptionFromMovie.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\AutoMapper.dll
+C:\Users\snltr\Desktop\Vidly\Vidly\bin\AutoMapper.xml

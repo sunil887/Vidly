@@ -9,12 +9,15 @@ namespace Vidly.Models
 {
     public class Movie
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+       
         public int Id { get; set; }
         public String Name { get; set; }
         public Genre Genre { get; set; }
+        [Display(Name = "Genre")]
         public Byte GenreId{ get; set; }
+        [Display(Name = "Release Date")]
         public DateTime ReleasedDate { get; set; }
+        [Display (Name = "Date Added")]
         public DateTime DateAdded
         {
             get
