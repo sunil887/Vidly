@@ -115,3 +115,6 @@ C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.xml
 C:\Users\snltr\Desktop\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\Users\snltr\Desktop\Vidly\Vidly\bin\AutoMapper.dll
 C:\Users\snltr\Desktop\Vidly\Vidly\bin\AutoMapper.xml
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.createRantal.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddingNumberInStockToMovie.resources
+C:\Users\snltr\Desktop\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddingNumberAvailableToMovie.resources
